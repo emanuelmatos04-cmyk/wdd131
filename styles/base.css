@@ -1,0 +1,98 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Lora', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 span {
+  display: block; /* centers logo/text easily */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for nav */
+  justify-content: center;
+  background-color: #000;
+}
+
+nav ul li {
+  flex: 1;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: #eee;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Main content */
+main {
+  max-width: 1200px; /* limited width */
+  margin: 2rem auto; /* centered horizontally */
+  display: grid; /* Grid for cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+main h1 {
+  grid-column: 1 / -1; /* spans full width */
+  text-align: center;
+  font-family: 'Lora', serif;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}

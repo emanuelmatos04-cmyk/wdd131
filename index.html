@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Layout Example</title>
-  <link rel="stylesheet" href="week01/styles/layout.css">
+
+  <!-- Title -->
+  <title>WDD 131 – Dynamic Web Fundamentals – Emanuel</title>
+
+  <!-- Meta description -->
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Emanuel. Example webpage layout with header, navigation, main content cards, and footer. Keywords: HTML, CSS, JavaScript, Web Development.">
+
+  <!-- Meta author -->
+  <meta name="author" content="Emanuel">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
   <header>
-    <h1>Header Content</h1>
+    <h1 id="course-title">WDD 131 – Dynamic Web Fundamentals</h1>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/">LinkedIn Profile</a></li>
+        <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
+        <li><a href="#">Final Project Folder</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav class="navigation">
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">Services</a>
-    <a href="#">Contact Us</a>
-  </nav>
-
   <main>
-    <section class="main-content">
-      <h2>Main Content</h2>
-      <p>Sample text for the main area.</p>
+    <h1>Emanuel</h1>
+
+    <section class="card">
+      <h2>Card One</h2>
+      <img src="images/card1.jpg" alt="Card One Image">
+      <p>This is the content for the first card. It includes an image and descriptive text.</p>
     </section>
-    <aside>
-      <h2>Aside Content</h2>
-      <p>Sample text for the sidebar area.</p>
-    </aside>
+
+    <section class="card">
+      <h2>Card Two</h2>
+      <img src="images/card2.jpg" alt="Card Two Image">
+      <p>This is the content for the second card. It also includes an image and descriptive text.</p>
+    </section>
   </main>
 
   <footer>
-    <p>Footer Content</p>
+    <p>&copy; <span id="currentyear"></span> Emanuel – Santo Domingo, Dominican Republic</p>
+    <p id="lastModified"></p>
   </footer>
+
+  <script>
+    // Dynamically set current year
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+    // Dynamically set last modified date
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
 </body>
 </html>
