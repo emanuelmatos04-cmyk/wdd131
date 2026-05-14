@@ -8,13 +8,15 @@
   <!-- Title -->
   <title>WDD 131 – Dynamic Web Fundamentals – Emanuel Matos</title>
 
-  <!-- Meta description -->
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Emanuel. Example webpage layout with header, navigation, main content cards, and footer. Keywords: HTML, CSS, JavaScript, Web Development.">
+  <!-- Meta description (shortened to under 160 characters) -->
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Emanuel Matos. Personal webpage with header, navigation, cards, and footer.">
 
   <!-- Meta author -->
   <meta name="author" content="Emanuel Matos">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts with preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
@@ -22,13 +24,17 @@
 </head>
 <body>
   <header>
-    <h1 id="course-title">WDD 131 – Dynamic Web Fundamentals</h1>
+    <h1><span id="course-title">WDD 131 – Dynamic Web Fundamentals</span></h1>
     <nav>
       <ul>
         <li><a href="https://www.linkedin.com/">LinkedIn Profile</a></li>
         <li><a href="https://byupw.instructure.com/">Canvas</a></li>
         <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
         <li><a href="#">Final Project Folder</a></li>
+        <!-- Extra links to meet 7 total -->
+        <li><a href="https://www.microsoft.com/">Microsoft</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="https://www.w3.org/">W3C</a></li>
       </ul>
     </nav>
   </header>
@@ -38,28 +44,23 @@
 
     <section class="card">
       <h2>About Me</h2>
-      <img src="images/emanu.jpg" alt="Card One Image">
+      <img src="images/emanu.jpg" alt="Portrait of Emanuel Matos in suit and tie">
       <p>I am Emanuel, a dedicated bachelor student in software engineering with a strong interest in cloud computing, cybersecurity, and artificial intelligence.</p>
     </section>
 
     <section class="card">
       <h2>Playa Boca Chica</h2>
-      <img src="images/playabocachica.jpg" alt="This is my favorite beach in the Dominican Republic, Playa Boca Chica.">
+      <img src="images/playabocachica.jpg" alt="Beach view of Playa Boca Chica in the Dominican Republic">
       <p>This is my favorite beach in the Dominican Republic, Playa Boca Chica.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Emanuel – Santo Domingo, Dominican Republic</p>
+    <p>&copy; <span id="currentyear"></span> Emanuel Matos — Santo Domingo, Dominican Republic</p>
     <p id="lastModified"></p>
   </footer>
 
-  <script>
-    // Dynamically set current year
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-    // Dynamically set last modified date
-    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-  </script>
+  <!-- External JS file -->
+  <script src="scripts/getdates.js"></script>
 </body>
 </html>
