@@ -1,8 +1,7 @@
-@media (min-width: 768px) {
+@media (min-width: 768px) {   /* Media query required */
   nav {
-    display: flex;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: center;
   }
 
   #hamburger {
@@ -13,3 +12,4 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
