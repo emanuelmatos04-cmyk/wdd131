@@ -1,17 +1,26 @@
-// Footer dynamic year and last modified
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
- 
-// Hamburger menu toggle
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
- 
+const year = document.querySelector("#year");
+
+year.textContent = new Date().getFullYear();
+
+const lastModified = document.querySelector("#lastModified");
+
+lastModified.textContent = document.lastModified;
+
+const hamburger = document.querySelector("#hamburger");
+
+const navMenu = document.querySelector("#navMenu");
+
 hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
- 
-  if (navMenu.classList.contains("open")) {
-    hamburger.textContent = "✖";
-  } else {
-    hamburger.textContent = "☰";
-  }
+
+    navMenu.classList.toggle("show");
+
+    if (navMenu.classList.contains("show")) {
+
+        hamburger.textContent = "✖";
+
+    } else {
+
+        hamburger.textContent = "☰";
+    }
+
 });
