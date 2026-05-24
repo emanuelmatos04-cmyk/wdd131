@@ -1,0 +1,67 @@
+:root {
+  --primary-color: #004aad;
+  --secondary-color: #f4d03f;
+  --font-heading: 'Lora', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-heading);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+#weather {
+  background: var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+#weather h2 {
+  font-family: var(--font-heading);
+  position: relative;
+}
+
+/* Pseudo-element for weather icon in large view */
+@media only screen and (min-width: 768px) {
+  #weather h2::after {
+    content: " ⛅";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}

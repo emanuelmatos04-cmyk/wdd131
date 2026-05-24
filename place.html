@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Page – Santo Domingo</title>
+  <meta name="description" content="Responsive webpage for Santo Domingo with hero image and weather section.">
+  <meta name="author" content="Emanuel Matos">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/place.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Santo Domingo</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero image with srcset -->
+    <picture>
+      <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+      <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+      <img src="images/santosda.jpg" alt="Hero view of Santo Domingo">
+    </picture>
+
+    <!-- Weather section -->
+    <section id="weather">
+      <h2>Weather <span class="icon"></span></h2>
+      <p>Temperature: <span id="temp">48</span> °F</p>
+      <p>Wind Speed: <span id="wind">5</span> mph</p>
+      <p>Wind Chill: <span id="windChill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Emanuel Matos — Santo Domingo, Dominican Republic</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
