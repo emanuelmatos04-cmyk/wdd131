@@ -6,13 +6,12 @@
   <title>Lazy Loading Demo</title>
   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Emanuel – Lazy Loading Images">
   <meta name="author" content="Emanuel">
-  <link rel="stylesheet" href="css/lazyload.css">
-  <script src="js/lazyload.js" defer></script>
+  <link rel="stylesheet" href="week04/styles/lazyload.css">
+  <script src="week04/lazyload.js" defer></script>
 </head>
 <body>
   <main>
     <h1>Lazy Loading Observation</h1>
-    
     <!-- Six portrait images with lazy loading -->
     <img src="images/photo1.jpg" alt="Sample 1" width="400" height="600" loading="lazy">
     <img src="images/photo2.jpg" alt="Sample 2" width="400" height="600" loading="lazy">

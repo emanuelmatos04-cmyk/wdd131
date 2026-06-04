@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px) {
+
+    body {
+        background-color: #e9e9e9;
+    }
+
+    header {
+        width: 85%;
+
+        max-width: 900px;
+
+        padding: 15px 25px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: auto;
+
+        background: none;
+
+        gap: 20px;
+    }
+
+    nav a {
+        padding: 0;
+
+        font-size: 0.9rem;
+    }
+
+    nav a:hover {
+        color: #d7b3ff;
+    }
+
+    main {
+        width: 85%;
+
+        max-width: 900px;
+
+        margin: auto;
+    }
+
+    main h2 {
+        margin: 20px 0 30px;
+    }
+
+    .temple-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 30px;
+
+        justify-items: center;
+    }
+
+    figure img {
+        width: 200px;
+
+        height: 120px;
+
+        object-fit: cover;
+    }
+
+    figcaption {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        width: 85%;
+
+        max-width: 900px;
+
+        padding: 14px;
+    }
+}
