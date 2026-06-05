@@ -1,14 +1,11 @@
 @media screen and (min-width: 768px) {
-
     body {
         background-color: #e9e9e9;
     }
 
     header {
         width: 85%;
-
         max-width: 900px;
-
         padding: 15px 25px;
     }
 
@@ -18,23 +15,16 @@
 
     nav {
         display: flex !important;
-
         flex-direction: row;
-
         justify-content: center;
-
         align-items: center;
-
         width: auto;
-
         background: none;
-
         gap: 20px;
     }
 
     nav a {
         padding: 0;
-
         font-size: 0.9rem;
     }
 
@@ -44,9 +34,7 @@
 
     main {
         width: 85%;
-
         max-width: 900px;
-
         margin: auto;
     }
 
@@ -56,19 +44,14 @@
 
     .temple-grid {
         display: grid;
-
         grid-template-columns: repeat(3, 1fr);
-
         gap: 30px;
-
         justify-items: center;
     }
 
     figure img {
         width: 200px;
-
         height: 120px;
-
         object-fit: cover;
     }
 
@@ -78,9 +61,7 @@
 
     footer {
         width: 85%;
-
         max-width: 900px;
-
         padding: 14px;
     }
 }

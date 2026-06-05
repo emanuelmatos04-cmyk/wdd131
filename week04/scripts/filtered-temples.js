@@ -1,4 +1,4 @@
-// Array of temple objects
+// Temple objects array (7 originals + 3 added = 10 total)
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -56,48 +56,87 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Add more temple objects here...
+  // ➡️ Three added temples
+  {
+    templeName: "Salt Lake Utah",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 382207,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-temple-lds-102972-wallpaper.jpg"
+  },
+  {
+    templeName: "São Paulo Brazil",
+    location: "São Paulo, Brazil",
+    dedicated: "1978, October, 30",
+    area: 59246,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-102972-wallpaper.jpg"
+  },
+  {
+    templeName: "Manila Philippines",
+    location: "Quezon City, Philippines",
+    dedicated: "1984, September, 25",
+    area: 26683,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-102972-wallpaper.jpg"
+  }
 ];
 
-// Function to render temple cards dynamically
-function renderTemples() {
+// Render function
+function renderTemples(list = temples) {
   const container = document.getElementById("templeGrid");
   container.innerHTML = "";
 
-  temples.forEach(temple => {
-    const card = document.createElement("div");
-    card.classList.add("temple-card");
+  list.forEach(temple => {
+    const card = document.createElement("figure");
 
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
-    img.loading = "lazy"; // ✅ native lazy loading
+    img.loading = "lazy";
 
-    const name = document.createElement("h3");
-    name.textContent = temple.templeName;
-
-    const location = document.createElement("p");
-    location.textContent = `Location: ${temple.location}`;
-
-    const dedicated = document.createElement("p");
-    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
-
-    const area = document.createElement("p");
-    area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+    const caption = document.createElement("figcaption");
+    caption.innerHTML = `
+      <strong>${temple.templeName}</strong><br>
+      Location: ${temple.location}<br>
+      Dedicated: ${temple.dedicated}<br>
+      Area: ${temple.area.toLocaleString()} sq ft
+    `;
 
     card.appendChild(img);
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedicated);
-    card.appendChild(area);
-
+    card.appendChild(caption);
     container.appendChild(card);
   });
+}
+
+// Filters
+function filterTemples(criteria) {
+  let filtered = temples;
+
+  if (criteria === "old") {
+    filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+  } else if (criteria === "new") {
+    filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+  } else if (criteria === "large") {
+    filtered = temples.filter(t => t.area > 90000);
+  } else if (criteria === "small") {
+    filtered = temples.filter(t => t.area < 10000);
+  }
+
+  renderTemples(filtered);
 }
 
 // Footer dynamic year and last modified
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Run render on page load
+// Event listeners for filters
+document.getElementById("homeFilter").addEventListener("click", () => renderTemples());
+document.getElementById("oldFilter").addEventListener("click", () => filterTemples("old"));
+document.getElementById("newFilter").addEventListener("click", () => filterTemples("new"));
+document.getElementById("largeFilter").addEventListener("click", () => filterTemples("large"));
+document.getElementById("smallFilter").addEventListener("click", () => filterTemples("small"));
+
+// Initial render
 renderTemples();
