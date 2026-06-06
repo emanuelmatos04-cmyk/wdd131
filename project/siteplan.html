@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Site plan document for a Dominican Republic tourist guide website. Includes site name, purpose, scenarios, color schema, typography, and wireframes.">
+
+  <meta name="author" content="Emanuel Matos">
+
+  <title>Dominican Republic Tourist Guide - Site Plan</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Discover DR</h1>
+    <p>Dominican Republic Tourist Guide — Site Plan</p>
+  </header>
+
+  <main>
+    <!-- Site Name -->
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Discover DR</strong> — A tourist guide dedicated to showcasing the culture, beaches, and attractions of the Dominican Republic. The name is short, memorable, and communicates the purpose clearly.</p>
+      <p>Optional domain: <em>discoverdr.org</em></p>
+    </section>
+
+    <!-- Site Purpose -->
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The site provides a hub for travelers interested in visiting the Dominican Republic. It offers information about popular destinations, cultural highlights, local cuisine, and practical travel tips. Visitors can explore guides to Santo Domingo, Punta Cana, Puerto Plata, and other regions, with recommendations for activities, accommodations, and transportation.</p>
+    </section>
+
+    <!-- Scenarios -->
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>What are the top beaches to visit in Punta Cana?</li>
+        <li>Where can I find authentic Dominican food in Santo Domingo?</li>
+        <li>What cultural festivals are happening during my travel dates?</li>
+      </ul>
+    </section>
+
+    <!-- Color Schema -->
+    <section>
+      <h2>Color Schema</h2>
+      <p>Primary Color: <span style="color:#006994;">#006994</span> (Caribbean sea blue — used for headers, navigation, and footer)</p>
+      <p>Accent Color: <span style="color:#f4a300;">#f4a300</span> (Tropical sun orange — used for buttons and highlights)</p>
+      <p>Background Color: <span style="background-color:#e9e9e9; padding:2px 6px;">#e9e9e9</span> (used for body background)</p>
+      <p>Text Color: <span style="color:#222;">#222</span> (used for body text)</p>
+    </section>
+
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+      <p>Headings: <span style="font-family:'Merriweather', serif;">Merriweather</span> — elegant and readable for titles.</p>
+      <p>Body Text: <span style="font-family:'Roboto', sans-serif;">Roboto</span> — clean and modern for paragraphs.</p>
+    </section>
+
+    <!-- Wireframes -->
+    <section>
+      <h2>Wireframes</h2>
+      <h3>Mobile View</h3>
+      <p>[Placeholder diagram: single column layout with header, hamburger nav, featured image of Dominican Republic, destination cards stacked vertically, footer]</p>
+      <h3>Desktop View</h3>
+      <p>[Placeholder diagram: wider layout with header, horizontal nav, hero image banner, 3-column grid of destination cards, footer]</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="year"></span> Emanuel Matos | Santo Domingo, Dominican Republic</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
