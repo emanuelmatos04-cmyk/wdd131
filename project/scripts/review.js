@@ -1,4 +1,5 @@
 // Product Array (project-related services)
+console.log("review.js loaded successfully")
 const products = [
   {
     id: "tb-001",
